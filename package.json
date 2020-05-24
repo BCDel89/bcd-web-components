@@ -2,6 +2,11 @@
   "name": "bcd-web-components",
   "version": "1.0.0",
   "description": "BCDel89's web component library",
+  "homepage": "http://buddycdelaune.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BCDel89/bcd-web-components"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
