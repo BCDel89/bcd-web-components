@@ -1,0 +1,33 @@
+{
+  "name": "bcd-web-components",
+  "version": "1.0.0",
+  "description": "BCDel89's web component library",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/webcomponents/webcomponents.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.12.2",
+    "puppeteer": "^3.1.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/mocha": "^7.0.2"
+  }
+}

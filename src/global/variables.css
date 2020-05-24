@@ -1,0 +1,9 @@
+:root {
+    --margin-left: 2px;
+    --border-color: black;
+    --background-fill-color: black;
+    --background-empty-color: white;
+    --size: 15px;
+    --border-radius: 50%;
+}
+
