@@ -21,10 +21,22 @@ export class BcdRating implements ComponentInterface {
     let ret: any[] = [];
 
     for (let i = 0; i < this.max; i++) {
-      const portionFull: boolean = i < this.rating;
+      const portionFull: boolean = (i < this.rating);
+      const portionPartial: boolean = (i < this.rating && (i + 1) > this.rating);
       const classes: string = 'portion ' + (portionFull ? 'portion-full' : '');
-      ret.push(<div class={classes}></div>);
+
+      if (!portionPartial) {
+        ret.push(<div class={classes}></div>);
+      } else {
+      	const width = Math.round(((this.rating % 1) * 100) / 10) * 10;
+        ret.push(
+					<div class="portion">
+						<div class={'portion-partial partial-' + width}></div>
+					</div>
+        );
+      }
     }
+
 
     return ret;
   }

@@ -23,6 +23,22 @@ This is a web component library from BCDel89 that includes the following web-com
 <bcd-rating rating="3" max="5"></bcd-rating>
 ```
 
+## Customization
+Web components can be styled using the following CSS variables:
+
+```CSS
+bcd-rating {
+    --bcd-rating-margin-left: 2px;
+    --bcd-rating-border-color: black;
+    --bcd-rating-background-fill-color: black;
+    --bcd-rating-background-empty-color: white;
+    --bcd-rating-size: 15px;
+    --bcd-rating-border-radius: 50%;
+    --bcd-rating-border-width: 2px;
+    --bcd-rating-border-type: solid;
+}
+```
+
 ## Demo
 
 <!--
