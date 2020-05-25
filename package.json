@@ -1,6 +1,6 @@
 {
   "name": "bcd-web-components",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "BCDel89's web component library",
   "homepage": "http://buddycdelaune.com",
   "repository": {
@@ -21,11 +21,12 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
+    "clean": "rimraf dist",
+    "start": "npm run clean && stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "prepublish": "npm run build"
+    "prepublish": "npm run clean && npm run build"
   },
   "devDependencies": {
     "@stencil/core": "^1.12.2",

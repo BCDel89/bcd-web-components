@@ -4,6 +4,11 @@ export const config: Config = {
   namespace: 'bcd-web-components',
   taskQueue: 'async',
   globalStyle: 'src/global/variables.css',
+  bundles: [
+    {
+      components: ['bcd-rating']
+    }
+  ],
   outputTargets: [
     {
       type: 'dist',
@@ -14,7 +19,7 @@ export const config: Config = {
     },
     {
       type: 'www',
-      serviceWorker: null // disable service workers
+      serviceWorker: null
     }
   ]
 };

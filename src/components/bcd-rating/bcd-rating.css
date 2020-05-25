@@ -1,16 +1,24 @@
 :host {
   display: inline-flex;
+    --bcd-rating-margin-left: 2px;
+    --bcd-rating-border-color: black;
+    --bcd-rating-background-fill-color: black;
+    --bcd-rating-background-empty-color: white;
+    --bcd-rating-size: 15px;
+    --bcd-rating-border-radius: 50%;
+    --bcd-rating-border-width: 2px;
+    --bcd-rating-border-type: solid;
 }
 
 .portion {
-    border: 1px solid var(--border-color);
-    background-color: var(--background-empty-color);
-    width: var(--size);
-    height: var(--size);
-    border-radius: var(--border-radius);
-    margin: 0 var(--margin-left) 0 var(--margin-left);
+    border: var(--bcd-rating-border-width) var(--bcd-rating-border-type) var(--bcd-rating-border-color);
+    background-color: var(--bcd-rating-background-empty-color);
+    width: var(--bcd-rating-size);
+    height: var(--bcd-rating-size);
+    border-radius: var(--bcd-rating-border-radius);
+    margin: 0 var(--bcd-rating-margin-left) 0 var(--bcd-rating-margin-left);
 }
 
 .portion-full {
-    background-color: var(--background-fill-color);
+    background-color: var(--bcd-rating-background-fill-color);
 }

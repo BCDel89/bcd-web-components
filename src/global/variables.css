@@ -1,9 +1,11 @@
 :root {
-    --margin-left: 2px;
-    --border-color: black;
-    --background-fill-color: black;
-    --background-empty-color: white;
-    --size: 15px;
-    --border-radius: 50%;
+    --bcd-rating-margin-left: 2px;
+    --bcd-rating-border-color: black;
+    --bcd-rating-background-fill-color: black;
+    --bcd-rating-background-empty-color: white;
+    --bcd-rating-size: 15px;
+    --bcd-rating-border-radius: 50%;
+    --bcd-rating-border-width: 2px;
+    --bcd-rating-border-type: solid;
 }
 

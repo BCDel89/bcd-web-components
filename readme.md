@@ -13,12 +13,13 @@ This is a web component library from BCDel89 that includes the following web-com
 
 
 ```bash
-npm install --save bcd-web-components
+<script type="module" src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
 ```
 
 ## Usage
 
 ```html
+<script type="module" src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
 <bcd-rating rating="3" max="5"></bcd-rating>
 ```
 
@@ -28,14 +29,14 @@ npm install --save bcd-web-components
 ```
 <custom-element-demo>
   <template>
-    <link rel="import" href="bcd-rating.html">
-    <next-code-block></next-code-block>
+    <script type="module" src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
+    <bcd-rating rating="3" max="5"></bcd-rating>
   </template>
 </custom-element-demo>
 ```
 -->
 ```html
-<bcd-rading rating="3" max="5"></bcd-rading>
+<bcd-rating rating="3" max="5"></bcd-rating>
 ```
 
 ## License
