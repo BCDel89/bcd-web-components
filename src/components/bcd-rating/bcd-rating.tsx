@@ -2,7 +2,7 @@ import {Component, ComponentInterface, Host, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 'bcd-rating',
-  styleUrl: 'bcd-rating.css',
+  styleUrl: 'bcd-rating.scss',
   shadow: true,
 })
 export class BcdRating implements ComponentInterface {
@@ -45,7 +45,7 @@ export class BcdRating implements ComponentInterface {
     return (
 			<Host>
         <slot>
-          {this.getPortions()}
+            {this.getPortions()}
         </slot>
       </Host>
     );

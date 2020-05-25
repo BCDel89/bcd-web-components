@@ -1,0 +1,169 @@
+:host {
+  display: block;
+  --bcd-rating-circle-fill-color: #38bbe0;
+  --bcd-rating-circle-empty-color: rgb(219, 219, 219);
+  --bcd-rating-circle-bg-color: white;
+}
+
+
+$bcd-rating-circle-size: 0.08em;
+$bcd-rating-circle-hover-size: 0.04em;
+$bg-color: #f5f5f5;
+
+.rect-auto {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.pie {
+  position: absolute;
+  border: $bcd-rating-circle-size solid var(--bcd-rating-circle-fill-color);
+  width: 1 - (2 * $bcd-rating-circle-size);
+  height: 1 - (2 * $bcd-rating-circle-size);
+  clip: rect(0em, 0.5em, 1em, 0em);
+  border-radius: 50%;
+  transform: rotate(0deg);
+}
+
+.pie-fill {
+  transform: rotate(180deg);
+}
+
+// main
+.c100 {
+
+  *, *:before, *:after {
+    box-sizing: content-box;
+  }
+
+  position: relative;
+  font-size: 120px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  float: left;
+  margin: 0 0.1em 0.1em 0;
+  background-color: var(--bcd-rating-circle-empty-color);
+
+  // center circle to its parent
+  &.center {
+    float: none;
+    margin: 0 auto;
+  }
+
+  // xl size
+  &.xl {
+    font-size: 240px;
+  }
+
+  // lg size
+  &.lg {
+    font-size: 180px;
+  }
+
+  // md size
+  &.md {
+    font-size: 120px;
+  }
+
+  // sm size
+  &.sm {
+    font-size: 80px;
+  }
+
+  // xs size
+  &.xs {
+    font-size: 50px;
+  }
+
+  // centered value inside circle
+  > span {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 5em;
+    line-height: 5em;
+    font-size: 0.2em;
+    color: var(--bcd-rating-circle-empty-color);
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+  }
+
+  // background inside the circle
+  &:after {
+    position: absolute;
+    top: $bcd-rating-circle-size;
+    left: $bcd-rating-circle-size;
+    display: block;
+    content: " ";
+    border-radius: 50%;
+    background-color: $bg-color;
+    width: 1 - (2 * $bcd-rating-circle-size);
+    height: 1 - (2 * $bcd-rating-circle-size);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+  }
+
+  // the slice (mask)
+  .slice {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    clip: rect(0em, 1em, 1em, 0.5em);
+  }
+
+  // circle to show the status
+  .bar {
+    @extend .pie;
+  }
+
+
+  // loop to create all needed elements automatically
+  @for $j from 51 through 100 {
+
+    &.p#{$j} .slice {
+      @extend .rect-auto;
+    }
+
+    &.p#{$j} .bar:after {
+      @extend .pie-fill;
+    }
+
+    &.p#{$j} .fill {
+      @extend .pie;
+      @extend .pie-fill;
+    }
+
+  }
+
+  // loop to rotate all 100 circles
+  @for $j from 1 through 100 {
+    &.p#{$j} .bar {
+      transform: rotate((360/100*$j) + deg);
+    }
+  }
+
+  // hover styles
+  &:hover {
+    cursor: default;
+
+    > span {
+      width: 3.33em;
+      line-height: 3.33em;
+      font-size: 0.3em;
+      color: var(--bcd-rating-circle-fill-color);
+    }
+
+    &:after {
+      top: $bcd-rating-circle-hover-size;
+      left: $bcd-rating-circle-hover-size;
+      width: 1 - (2 * $bcd-rating-circle-hover-size);
+      height: 1 - (2 * $bcd-rating-circle-hover-size);
+    }
+  }
+}
