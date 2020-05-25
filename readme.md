@@ -46,13 +46,23 @@ bcd-rating {
 <custom-element-demo>
   <template>
     <script type="module" src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
-    <bcd-rating rating="3" max="5"></bcd-rating>
+    <div>
+        <bcd-rating rating="3.5" max="5"></bcd-rating>
+    </div>
+    <div>
+        <bcd-rating rating="7" max="10"></bcd-rating>
+    </div>
   </template>
 </custom-element-demo>
 ```
 -->
 ```html
-<bcd-rating rating="3" max="5"></bcd-rating>
+<div>
+    <bcd-rating rating="3.5" max="5"></bcd-rating>
+</div>
+<div>
+    <bcd-rating rating="7" max="10"></bcd-rating>
+</div>
 ```
 
 ## License
