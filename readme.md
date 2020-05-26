@@ -7,12 +7,13 @@
 This is a web component library from BCDel89 that includes the following web-components:
 
 - bcd-rating
+- bcd-rating-circle
 
 
 ## Installation
 
 
-```bash
+```html
 <script type="module" src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
 ```
 

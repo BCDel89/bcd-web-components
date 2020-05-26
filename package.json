@@ -35,6 +35,5 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@types/mocha": "^7.0.2"
   }
 }
