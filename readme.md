@@ -29,13 +29,20 @@ Web components can be styled using the following CSS variables:
 ```CSS
 bcd-rating {
     --bcd-rating-margin-left: 2px;
-    --bcd-rating-border-color: black;
+    --bcd-rating-border-color: #38bbe0;
     --bcd-rating-background-fill-color: black;
     --bcd-rating-background-empty-color: white;
+    --bcd-rating-hover-border-color: #30a0c0;
     --bcd-rating-size: 15px;
     --bcd-rating-border-radius: 50%;
     --bcd-rating-border-width: 2px;
     --bcd-rating-border-type: solid;
+}
+
+bcd-rating-circle {
+    --bcd-rating-circle-fill-color: #38bbe0;
+    --bcd-rating-circle-empty-color: rgb(219, 219, 219);
+    --bcd-rating-circle-bg-color: white;
 }
 ```
 
@@ -46,22 +53,62 @@ bcd-rating {
 <custom-element-demo>
   <template>
     <script type="module" src="https://unpkg.com/bcd-web-components@latest/dist/bcd-web-components/bcd-web-components.esm.js"></script>
+
     <div>
-        <bcd-rating rating="3.5" max="5"></bcd-rating>
+        <bcd-rating rating="3" max="5"></bcd-rating>
     </div>
     <div>
-        <bcd-rating rating="7" max="10"></bcd-rating>
+        <bcd-rating rating="8" max="10"></bcd-rating>
     </div>
+    <div>
+        <bcd-rating rating="6" max="10"></bcd-rating>
+    </div>
+    <div>
+        <bcd-rating rating="5" max="10"></bcd-rating>
+    </div>
+    <div>
+        <bcd-rating rating="1" max="5"></bcd-rating>
+    </div>
+
+    <br> <br> <br>
+
+    <div>
+        <bcd-rating-circle rating="3" max="5" size="xl" fraction="true"></bcd-rating-circle>
+        <bcd-rating-circle rating="8" max="10" size="lg" fraction="false"></bcd-rating-circle>
+        <bcd-rating-circle rating="6" max="10" size="md" fraction="true"></bcd-rating-circle>
+        <bcd-rating-circle rating="5" max="10" size="sm"></bcd-rating-circle>
+        <bcd-rating-circle rating="1" max="5" size="xs" fraction="true"></bcd-rating-circle>
+    </div>
+
   </template>
 </custom-element-demo>
 ```
 -->
 ```html
 <div>
-    <bcd-rating rating="3.5" max="5"></bcd-rating>
+    <bcd-rating rating="3" max="5"></bcd-rating>
 </div>
 <div>
-    <bcd-rating rating="7" max="10"></bcd-rating>
+    <bcd-rating rating="8" max="10"></bcd-rating>
+</div>
+<div>
+    <bcd-rating rating="6" max="10"></bcd-rating>
+</div>
+<div>
+    <bcd-rating rating="5" max="10"></bcd-rating>
+</div>
+<div>
+    <bcd-rating rating="1" max="5"></bcd-rating>
+</div>
+
+<br> <br> <br>
+
+<div>
+    <bcd-rating-circle rating="3" max="5" size="xl" fraction="true"></bcd-rating-circle>
+    <bcd-rating-circle rating="8" max="10" size="lg" fraction="false"></bcd-rating-circle>
+    <bcd-rating-circle rating="6" max="10" size="md" fraction="true"></bcd-rating-circle>
+    <bcd-rating-circle rating="5" max="10" size="sm"></bcd-rating-circle>
+    <bcd-rating-circle rating="1" max="5" size="xs" fraction="true"></bcd-rating-circle>
 </div>
 ```
 
