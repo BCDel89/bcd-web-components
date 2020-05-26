@@ -1,6 +1,6 @@
 {
   "name": "bcd-web-components",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "BCDel89's web component library",
   "homepage": "http://buddycdelaune.com",
   "repository": {
@@ -34,6 +34,5 @@
     "puppeteer": "^3.1.0"
   },
   "license": "MIT",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
